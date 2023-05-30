@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none !important;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+.main-container {
+  @apply max-w-[1174px] mx-auto px-5;
+}
+
+.home_cards {
+  @apply grid grid-cols-1 gap-6 lg:grid-cols-3 md:grid-cols-2;
+}
+
+.card_title {
+  @apply text-sm font-light text-center uppercase text-light;
+}
+
+.car_image-wrap {
+  @apply max-h-[400px] h-full flex flex-col items-center;
+}
+
+.input-container {
+  @apply bg-white border border-borderColor max-w-[419px] mx-auto p-[22px] rounded-[3px] mb-[22px];
+}
+
+.input_title {
+  @apply text-[22px] mb-[22px];
+}
+
+.checkout_input_box {
+  @apply border border-borderColor w-full p-[11px] focus:outline-inputFocus rounded-[3px];
+}
+
+.continue__btn {
+  @apply bg-black w-full p-[11px] text-white mt-[22px] rounded-[3px];
+}
+
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background: #c5c5c5;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  background: #000;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%);
+  -webkit-transform: translateY(-45%);
+  fill: #ffffff;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 0px;
+}
+
+.arrow--left {
+  left: 5px;
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+}
+
+.arrow--disabled {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.secondary-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.thumbnail .keen-slider__slide {
+  font-size: 30px;
+  margin-top: 10px;
+  height: 100px;  
+}
+
+.thumbnail2 .keen-slider__slideDot {
+  font-size: 10px;
+  margin-top: 10px;
+  height: 20px;
+}
+
+.thumbnail2 .keen-slider__slideDot {
+  cursor: pointer;
+}
+
+.thumbnail .keen-slider__slide {
+  cursor: pointer;
+}
+
+.swap-on-hover {
+  position: relative;
+}
+
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity 0.3s linear;
+  cursor: pointer;
+}
+
+
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity 0.3s linear;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+}
+
+.swap-on-hover:hover>.swap-on-hover__front-image {
+  opacity: 0;
+}
+
+.swap-on-hover .swap-on-hover__back-image {
+  z-index: 9999;
+  transition: opacity 0.3s linear;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 415px;
+}
+
+.swap-on-hover:hover>.swap-on-hover__back-image {
+  opacity: 1;
+}
+
+
+@media (max-width: 640px) {
+  .thumbnail .keen-slider__slide {
+    height: 70px;
+  }
+}
+
+
