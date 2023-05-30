@@ -37,7 +37,7 @@ const MobileDrawer = () => {
         </span>
       </div>
       <Drawer open={isOpen} onClose={toggleDrawer} direction="left">
-        <div className="w-full h-full px-5 py-10 bg-primary">
+        <div className="w-full h-full px-5 py-10 bg-primary z-[1000]">
           <Link href={`/`}>
             <a>
               <Image

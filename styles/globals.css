@@ -156,7 +156,6 @@ body {
 }
 
 .swap-on-hover .swap-on-hover__back-image {
-  z-index: 9999;
   transition: opacity 0.3s linear;
   cursor: pointer;
   opacity: 0;
