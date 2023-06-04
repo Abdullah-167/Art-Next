@@ -16,6 +16,7 @@ body {
 .scrollbar-hidden::-webkit-scrollbar {
   display: none !important;
 }
+
 .scrollbar-hidden {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
@@ -59,17 +60,18 @@ body {
 
 .dots {
   display: flex;
-  padding: 10px 0;
+  padding: 10px 50px;
   justify-content: center;
 }
 
 .dot {
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   background: #c5c5c5;
   border-radius: 100%;
   cursor: pointer;
 }
+
 .dot:focus {
   outline: none;
 }
@@ -113,13 +115,11 @@ body {
 .thumbnail .keen-slider__slide {
   font-size: 30px;
   margin-top: 10px;
-  height: 100px;  
+  height: 100px;
 }
 
-.thumbnail2 .keen-slider__slideDot {
-  font-size: 10px;
+.thumbnail .keen-slider__slideDot {
   margin-top: 10px;
-  height: 20px;
 }
 
 .thumbnail2 .keen-slider__slideDot {
@@ -177,3 +177,153 @@ body {
 }
 
 
+
+
+
+/* Styles for main slider */
+.slick-slider {
+  position: relative;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+/* Styles for thumbnail slider */
+.slick-slider.thumbnail {
+  max-width: 100px;
+  margin: auto;
+}
+
+.slick-slider.thumbnail .slick-slide {
+  width: 100px;
+  height: 100px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.slick-slider.thumbnail .slick-slide:hover {
+  border-color: black;
+}
+
+.slick-slider.thumbnail .slick-slide.slick-current {
+  background-color: black;
+}
+
+.slick-slider.thumbnail .slick-slide img {
+  object-fit: cover;
+}
+
+/* Styles for arrow buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  fill: #000;
+  transition: opacity 0.3s ease;
+}
+
+.arrow:hover {
+  opacity: 0.7;
+}
+
+.arrow--disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.arrow--left {
+  left: 10px;
+}
+
+.arrow--right {
+  right: 10px;
+}
+
+/* Additional styles */
+.max-w-6xl {
+  max-width: 6xl;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-gray-300 {
+  background-color: #e5e7eb;
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
+.border-black {
+  border-color: #000;
+}
+
+.hover\:border-black:hover {
+  border-color: #000;
+}
+
+.keen-slider__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination > div >  .keen-slider__slide {
+  width: 10px !important;
+  height: 10px !important;
+  min-height: auto !important;
+  min-width: auto !important;
+}

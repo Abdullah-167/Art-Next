@@ -135,14 +135,14 @@ export default function ProductDetail({ data }) {
             </>
           )}
         </div>
-        <div ref={thumbnailRef} className="keen-slider  max-w-[170px] mx-auto" >
+        <div ref={thumbnailRef} className="keen-slider pagination pb-8  max-w-[100px] mx-auto" >
           {data?.defaultProductVariant?.images?.map((item, index) => {
             const imageProps = item ? GetImage(item) : null;
             return (
-              <div className="w-3 h-1 px-4">
+              <div className="w-3 h-2 ">
                 {imageProps && (
                   <div key={index}
-                    className={`${index === currentSlide ? "bg-black" : "bg-gray-300 "} w-1 h-1 keen-slider__slide object-cover border-none rounded-full mr-2 cursor-pointer`}
+                    className={`${index === currentSlide ? "bg-black" : "bg-gray-300"} w-2 h-2 keen-slider__slide object-cover border-none rounded-full mr-2 cursor-pointer`}
                   ></div>
                 )}
               </div>
